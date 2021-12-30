@@ -1,18 +1,18 @@
 class Playlist {
-    id: {
-        playlistId: string;
+    id?: {
+        playlistId?: string;
     };
-    snippet: {
-        publishedAt: string;
-        title: string;
-        description: string;
-        channelId: string;
-        thumbnails: {
-            high: {
-                url: string
+    snippet?: {
+        publishedAt?: string;
+        title?: string;
+        description?: string;
+        channelId?: string;
+        thumbnails?: {
+            high?: {
+                url?: string
             }
         };
-        channelTitle: string;
+        channelTitle?: string;
     }
 }
 

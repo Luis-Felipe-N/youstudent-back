@@ -1,14 +1,14 @@
 import { Playlist } from "../../models/Playlist"
-import { ListPlaylistsRepository } from "../../repositories/implamations/ListPlaylistsRepository"
+import { PlaylistsRepository } from "../../repositories/implamations/PlaylistsRepository"
 
 class ListPlaylistsUseCase {
-    constructor(private listPlaylistsRepository: ListPlaylistsRepository) {}
+    constructor(private playlistsRepository: PlaylistsRepository) {}
     
     async execute() {
-        const playlists = await this.listPlaylistsRepository.listRandomPlaylists()
+        const playlists = await this.playlistsRepository.listRandomPlaylists()
 
         return playlists
     }
 }
 
-export {ListPlaylistsUseCase }
+export { ListPlaylistsUseCase }

@@ -1,8 +1,8 @@
-import { ListPlaylistsRepository } from "../../repositories/implamations/ListPlaylistsRepository";
+import { PlaylistsRepository } from "../../repositories/implamations/PlaylistsRepository";
 import { ListPlaylistsController } from "./ListPlaylistsController";
 import { ListPlaylistsUseCase } from "./ListPlaylistsUseCase";
 
-const listPlaylistsRepository = new ListPlaylistsRepository()
+const listPlaylistsRepository = new PlaylistsRepository()
 
 const listPlaylistUseCase = new ListPlaylistsUseCase(listPlaylistsRepository)
 
