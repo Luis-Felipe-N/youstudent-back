@@ -3,7 +3,6 @@ import { Playlist } from "../models/Playlist";
 
 interface IPlaylistsRepository {
     listBycategory( category: string ): Promise<Playlist[]>;
-    listRandomPlaylists(): Promise<Playlist[]>;
     search( idPlaylist: string );
 }
 

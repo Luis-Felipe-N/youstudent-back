@@ -13,33 +13,7 @@ class PlaylistsRepository implements IPlaylistsRepository {
 
     constructor() {}
 
-    async listRandomPlaylists(): Promise<Playlist[]> {
-        /**
-         * [ ] Listar umas 10 playlists de exemplo
-         * [ ] Listar playlists sobre tecnologias
-        */
-
-        const all = await this.youtube.search.list({
-            q: 'javascript',
-            part: ['snippet'],
-            maxResults: 10,
-            type: ['playlist'],
-            key: this.API_KEY,
-            fields: this.filterItems
-        })
-
-        const playlists: Playlist[] = all.data.items
-
-        return playlists
-    }
-
     async listBycategory(category: string, maxResults: number = 10): Promise<Playlist[]> {
-        /**
-         * [ ] retornar playlists a partir do name
-         * [ ] retornar 10 playlists por padrão
-         * [ ] se o user solicitar uma quantidade, retornar a quantidade solicitada
-         */
-
          const all = await this.youtube.search.list({
             q: category,
             part: ['snippet'],
@@ -51,6 +25,7 @@ class PlaylistsRepository implements IPlaylistsRepository {
 
         const playlists: Playlist[] = all.data.items
 
+        console.log( playlists )
         return playlists
     }
 

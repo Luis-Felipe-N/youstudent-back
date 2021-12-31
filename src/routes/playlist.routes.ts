@@ -5,11 +5,10 @@ import { searchPlaylistController } from '../modules/playlists/useCase/SearchPla
 const playlistRoutes = Router()
 
 playlistRoutes.get("/", ( request, response ) => {
-    listPlaylistController.handle(request, response)
 })
 
 playlistRoutes.post("/", ( request, response ) => {
-    
+    listPlaylistController.handle(request, response)
 })
 
 playlistRoutes.post("/search", ( request, response ) => {

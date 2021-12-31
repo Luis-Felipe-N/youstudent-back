@@ -4,8 +4,8 @@ import { PlaylistsRepository } from "../../repositories/implamations/PlaylistsRe
 class ListPlaylistsUseCase {
     constructor(private playlistsRepository: PlaylistsRepository) {}
     
-    async execute() {
-        const playlists = await this.playlistsRepository.listRandomPlaylists()
+    async execute( category: string, maxResults: number ) {
+        const playlists = await this.playlistsRepository.listBycategory( category, maxResults )
 
         return playlists
     }
